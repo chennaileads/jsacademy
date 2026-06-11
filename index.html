@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="template-version" content="1.0.1">
+    <title>JS English Academy - Spoken English & Soft Skills Training in Chennai</title>
+    <meta name="description" content="JS English Academy is a leading institute helping students and professionals improve English communication, soft skills, and personality development through practical, student-first training methods in Chennai, Tamilnadu.">
+    <meta name="keywords" content="JS English Academy, English communication, soft skills training, personality development, spoken English, English institute, Chennai">
+    <meta name="author" content="JS English Academy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="JS English Academy - Spoken English & Soft Skills Training">
+    <meta property="og:description" content="Improve your English communication, soft skills, and overall personality with practical, student-first training at JS English Academy.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="JS English Academy">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* ============================================
+   Equal Height for Course/Faculty Slider Images
+   ============================================ */
+
+/* Faculty Slider - Equal Image Height */
+.rs-faculty-slide-wrapper .rs-faculty-item .rs-faculty-thumb {
+    position: relative;
+    overflow: hidden;
+    height: 280px; /* Fixed height for all images */
+}
+
+.rs-faculty-slide-wrapper .rs-faculty-item .rs-faculty-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    object-position: center; /* Centers the image */
+    transition: all 0.5s ease;
+}
+
+/* Hover zoom effect (optional) */
+.rs-faculty-slide-wrapper .rs-faculty-item:hover .rs-faculty-thumb img {
+    transform: scale(1.1);
+}
+
+/* Faculty info overlay stays at bottom */
+.rs-faculty-slide-wrapper .rs-faculty-item .rs-faculty-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4), transparent);
+}
+
+/* ============================================
+   Equal Height for Courses Grid (courses.html)
+   ============================================ */
+.rs-faculty-four .rs-faculty-wrapper .rs-faculty-item .rs-faculty-thumb {
+    position: relative;
+    overflow: hidden;
+    height: 280px; /* Fixed height */
+}
+
+.rs-faculty-four .rs-faculty-wrapper .rs-faculty-item .rs-faculty-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+}
+
+.rs-faculty-four .rs-faculty-wrapper .rs-faculty-item:hover .rs-faculty-thumb img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .rs-faculty-slide-wrapper .rs-faculty-item .rs-faculty-thumb,
+    .rs-faculty-four .rs-faculty-wrapper .rs-faculty-item .rs-faculty-thumb {
+        height: 240px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .rs-faculty-slide-wrapper .rs-faculty-item .rs-faculty-thumb,
+    .rs-faculty-four .rs-faculty-wrapper .rs-faculty-item .rs-faculty-thumb {
+        height: 220px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .rs-faculty-slide-wrapper .rs-faculty-item .rs-faculty-thumb,
+    .rs-faculty-four .rs-faculty-wrapper .rs-faculty-item .rs-faculty-thumb {
+        height: 200px;
+    }
+}
+        .rs-footer-brand-name{color:var(--rs-white);font-size:26px;font-weight:700;margin-bottom:15px;line-height:1.3}
+        .rs-footer-about-text{color:rgba(255,255,255,0.7);font-size:15px;line-height:1.7;margin-bottom:20px;max-width:320px}
+        .rs-footer-contact-horizontal{display:flex;flex-wrap:wrap;gap:20px}
+        .rs-footer-contact-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);font-size:15px;transition:all 0.3s ease}
+        .rs-footer-contact-item a,.rs-footer-contact-item span{color:rgba(255,255,255,0.7);text-decoration:none;transition:all 0.3s ease}
+        .rs-footer-contact-item a:hover{color:var(--rs-white)}
+        .rs-footer-contact-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;min-width:36px;border-radius:50%;background:rgba(255,255,255,0.1);color:var(--rs-white);transition:all 0.3s ease}
+        .rs-footer-contact-item:hover .rs-footer-contact-icon{background:var(--rs-theme-yellow);color:var(--rs-black)}
+        .sticky-contact-buttons{position:fixed;bottom:25px;right:25px;z-index:9998;display:flex;flex-direction:column;gap:12px}
+        .sticky-btn{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.3);transition:all 0.3s;text-decoration:none;position:relative}
+        .sticky-btn:hover{transform:scale(1.1)}
+        .sticky-btn-whatsapp{background:#25D366;animation:pulse 2s infinite}
+        .sticky-btn-call{background:#007bff}
+        .sticky-btn svg{width:24px;height:24px;fill:#fff}
+        @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+        .sticky-btn-tooltip{position:absolute;right:65px;background:#333;color:#fff;padding:6px 14px;border-radius:4px;font-size:13px;white-space:nowrap;opacity:0;pointer-events:none;transition:all 0.3s}
+        .sticky-btn:hover .sticky-btn-tooltip{opacity:1}
+        @media(max-width:767px){.rs-footer-contact-horizontal{flex-direction:column;gap:12px}}
+        @media(max-width:576px){.sticky-contact-buttons{bottom:15px;right:15px;gap:10px}.sticky-btn{width:48px;height:48px}.sticky-btn svg{width:20px;height:20px}}
+    </style>
+</head>
+
+<body class="rs-smoother-yes">
+
+    <div id="rs-mouse"><div id="cursor-ball"></div></div>
+
+    <!-- Header area two start-->
+    <header>
+        <div class="rs-header-area rs-header-one header-transparent">
+            <div class="container-fluid g-0">
+                <div class="header-wrapper">
+                    <div class="header-left">
+                        <div class="header-logo">
+                            <a href="index.html"><<img src="assets/images/faculty/logo-white.webp" alt="JS English Academy">></a>
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <nav id="mobile-menu-two" class="main-menu">
+                            <ul class="multipage-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="courses.html">Courses</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-icon-wrapper">
+                            <div class="header-hamburger">
+                                <div class="sidebar-toggle">
+                                    <a class="header-bar-icon" href="javascript:void(0)"><span></span><span></span><span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-btn">
+                            <a class="rs-btn has-icon has-theme-yellow hover-white" href="contact.html">
+                                <span class="btn-text-wrap"><span class="text-default">Enroll Now</span><span class="text-hover">Enroll Now</span></span>
+                                <span class="icon-box">
+                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17"><path d="M10.2705 0C9.24524 0 8.41799 -1.11759e-08 7.76774 0.08775C7.09274 0.17775 6.52424 0.37275 6.07274 0.8235C5.67974 1.21725 5.48024 1.701 5.37599 2.2695C5.27474 2.82225 5.25524 3.498 5.25074 4.3095C5.24994 4.45868 5.30845 4.60207 5.41337 4.70813C5.5183 4.81418 5.66106 4.8742 5.81024 4.875C5.95942 4.8758 6.10282 4.8173 6.20887 4.71237C6.31492 4.60744 6.37494 4.46468 6.37574 4.3155C6.38024 3.49575 6.40124 2.9145 6.48224 2.47275C6.56099 2.04825 6.68624 1.8015 6.86849 1.61925C7.07624 1.4115 7.36799 1.2765 7.91849 1.20225C8.48474 1.1265 9.23549 1.125 10.3117 1.125H11.0617C12.1387 1.125 12.8895 1.1265 13.4557 1.20225C14.0062 1.2765 14.2972 1.41225 14.5057 1.61925C14.7142 1.82625 14.8477 2.118 14.922 2.66925C14.9985 3.23475 14.9992 3.98625 14.9992 5.0625V11.0625C14.9992 12.1388 14.9985 12.8902 14.922 13.4565C14.8477 14.007 14.7127 14.298 14.505 14.5057C14.2972 14.7135 14.0062 14.8485 13.4557 14.9227C12.8895 14.9985 12.1387 15 11.0617 15H10.3117C9.23549 15 8.48474 14.9985 7.91774 14.9227C7.36799 14.8485 7.07624 14.7127 6.86849 14.5057C6.68624 14.3235 6.56099 14.0767 6.48224 13.6522C6.40124 13.2105 6.38024 12.6293 6.37574 11.8095C6.37535 11.7356 6.36041 11.6626 6.33177 11.5945C6.30314 11.5264 6.26138 11.4646 6.20887 11.4126C6.15636 11.3607 6.09413 11.3196 6.02573 11.2917C5.95733 11.2638 5.88411 11.2496 5.81024 11.25C5.73637 11.2504 5.6633 11.2653 5.59521 11.294C5.52711 11.3226 5.46533 11.3644 5.41337 11.4169C5.36142 11.4694 5.32031 11.5316 5.29241 11.6C5.26451 11.6684 5.25035 11.7416 5.25074 11.8155C5.25524 12.627 5.27474 13.3028 5.37599 13.8555C5.48099 14.424 5.67974 14.9078 6.07349 15.3015C6.52424 15.753 7.09349 15.9465 7.76849 16.038C8.41799 16.125 9.24524 16.125 10.2705 16.125H11.103C12.129 16.125 12.9555 16.125 13.6057 16.0373C14.2807 15.9472 14.8492 15.7523 15.3007 15.3015C15.7522 14.85 15.9457 14.2815 16.0372 13.6065C16.1242 12.9563 16.1242 12.129 16.1242 11.1038V5.02125C16.1242 3.996 16.1242 3.16875 16.0372 2.5185C15.9465 1.8435 15.7522 1.275 15.3007 0.8235C14.8492 0.372 14.2807 0.1785 13.6057 0.08775C12.9555 -1.11759e-08 12.1282 0 11.103 0H10.2705Z"></path><path d="M0.5625 7.4993C0.413316 7.4993 0.270242 7.55856 0.164752 7.66405C0.0592632 7.76954 0 7.91261 0 8.0618C0 8.21098 0.0592632 8.35406 0.164752 8.45954C0.270242 8.56503 0.413316 8.6243 0.5625 8.6243H9.54225L8.0715 9.8843C8.01536 9.93236 7.96924 9.99101 7.93576 10.0569C7.90229 10.1228 7.88212 10.1946 7.87641 10.2683C7.86488 10.4171 7.91293 10.5644 8.01 10.6778C8.10707 10.7912 8.2452 10.8614 8.39401 10.8729C8.54282 10.8844 8.69012 10.8364 8.8035 10.7393L11.4285 8.4893C11.4903 8.43649 11.5398 8.37093 11.5738 8.29713C11.6078 8.22334 11.6254 8.14305 11.6254 8.0618C11.6254 7.98055 11.6078 7.90026 11.5738 7.82646C11.5398 7.75266 11.4903 7.6871 11.4285 7.6343L8.8035 5.3843C8.69012 5.28723 8.54282 5.23917 8.39401 5.25071C8.2452 5.26224 8.10707 5.33242 8.01 5.4458C7.91293 5.55918 7.86488 5.70647 7.87641 5.85528C7.88794 6.00409 7.95812 6.14223 8.0715 6.2393L9.5415 7.4993H0.5625Z"></path></svg>
+                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17"><path d="M10.2705 0C9.24524 0 8.41799 -1.11759e-08 7.76774 0.08775C7.09274 0.17775 6.52424 0.37275 6.07274 0.8235C5.67974 1.21725 5.48024 1.701 5.37599 2.2695C5.27474 2.82225 5.25524 3.498 5.25074 4.3095C5.24994 4.45868 5.30845 4.60207 5.41337 4.70813C5.5183 4.81418 5.66106 4.8742 5.81024 4.875C5.95942 4.8758 6.10282 4.8173 6.20887 4.71237C6.31492 4.60744 6.37494 4.46468 6.37574 4.3155C6.38024 3.49575 6.40124 2.9145 6.48224 2.47275C6.56099 2.04825 6.68624 1.8015 6.86849 1.61925C7.07624 1.4115 7.36799 1.2765 7.91849 1.20225C8.48474 1.1265 9.23549 1.125 10.3117 1.125H11.0617C12.1387 1.125 12.8895 1.1265 13.4557 1.20225C14.0062 1.2765 14.2972 1.41225 14.5057 1.61925C14.7142 1.82625 14.8477 2.118 14.922 2.66925C14.9985 3.23475 14.9992 3.98625 14.9992 5.0625V11.0625C14.9992 12.1388 14.9985 12.8902 14.922 13.4565C14.8477 14.007 14.7127 14.298 14.505 14.5057C14.2972 14.7135 14.0062 14.8485 13.4557 14.9227C12.8895 14.9985 12.1387 15 11.0617 15H10.3117C9.23549 15 8.48474 14.9985 7.91774 14.9227C7.36799 14.8485 7.07624 14.7127 6.86849 14.5057C6.68624 14.3235 6.56099 14.0767 6.48224 13.6522C6.40124 13.2105 6.38024 12.6293 6.37574 11.8095C6.37535 11.7356 6.36041 11.6626 6.33177 11.5945C6.30314 11.5264 6.26138 11.4646 6.20887 11.4126C6.15636 11.3607 6.09413 11.3196 6.02573 11.2917C5.95733 11.2638 5.88411 11.2496 5.81024 11.25C5.73637 11.2504 5.6633 11.2653 5.59521 11.294C5.52711 11.3226 5.46533 11.3644 5.41337 11.4169C5.36142 11.4694 5.32031 11.5316 5.29241 11.6C5.26451 11.6684 5.25035 11.7416 5.25074 11.8155C5.25524 12.627 5.27474 13.3028 5.37599 13.8555C5.48099 14.424 5.67974 14.9078 6.07349 15.3015C6.52424 15.753 7.09349 15.9465 7.76849 16.038C8.41799 16.125 9.24524 16.125 10.2705 16.125H11.103C12.129 16.125 12.9555 16.125 13.6057 16.0373C14.2807 15.9472 14.8492 15.7523 15.3007 15.3015C15.7522 14.85 15.9457 14.2815 16.0372 13.6065C16.1242 12.9563 16.1242 12.129 16.1242 11.1038V5.02125C16.1242 3.996 16.1242 3.16875 16.0372 2.5185C15.9465 1.8435 15.7522 1.275 15.3007 0.8235C14.8492 0.372 14.2807 0.1785 13.6057 0.08775C12.9555 -1.11759e-08 12.1282 0 11.103 0H10.2705Z"></path><path d="M0.5625 7.4993C0.413316 7.4993 0.270242 7.55856 0.164752 7.66405C0.0592632 7.76954 0 7.91261 0 8.0618C0 8.21098 0.0592632 8.35406 0.164752 8.45954C0.270242 8.56503 0.413316 8.6243 0.5625 8.6243H9.54225L8.0715 9.8843C8.01536 9.93236 7.96924 9.99101 7.93576 10.0569C7.90229 10.1228 7.88212 10.1946 7.87641 10.2683C7.86488 10.4171 7.91293 10.5644 8.01 10.6778C8.10707 10.7912 8.2452 10.8614 8.39401 10.8729C8.54282 10.8844 8.69012 10.8364 8.8035 10.7393L11.4285 8.4893C11.4903 8.43649 11.5398 8.37093 11.5738 8.29713C11.6078 8.22334 11.6254 8.14305 11.6254 8.0618C11.6254 7.98055 11.6078 7.90026 11.5738 7.82646C11.5398 7.75266 11.4903 7.6871 11.4285 7.6343L8.8035 5.3843C8.69012 5.28723 8.54282 5.23917 8.39401 5.25071C8.2452 5.26224 8.10707 5.33242 8.01 5.4458C7.91293 5.55918 7.86488 5.70647 7.87641 5.85528C7.88794 6.00409 7.95812 6.14223 8.0715 6.2393L9.5415 7.4993H0.5625Z"></path></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header area one start-->
+    <header>
+        <div class="rs-header-area rs-header-one">
+            <div class="container-fluid g-0">
+                <div id="rs-sticky-header" class="header-wrapper rs-sticky-header">
+                    <div class="header-left">
+                        <div class="header-logo">
+                            <a href="index.html"><img src="assets/images/logo/logo-white.webp" alt="JS English Academy"></a>
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <nav id="mobile-menu" class="main-menu">
+                            <ul class="multipage-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="courses.html">Courses</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-icon-wrapper">
+                            <div class="header-hamburger">
+                                <div class="sidebar-toggle">
+                                    <a class="header-bar-icon" href="javascript:void(0)"><span></span><span></span><span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-btn">
+                            <a class="rs-btn has-icon has-theme-yellow hover-white" href="contact.html">
+                                <span class="btn-text-wrap"><span class="text-default">Enroll Now</span><span class="text-hover">Enroll Now</span></span>
+                                <span class="icon-box">
+                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17"><path d="M10.2705 0C9.24524 0 8.41799 -1.11759e-08 7.76774 0.08775C7.09274 0.17775 6.52424 0.37275 6.07274 0.8235C5.67974 1.21725 5.48024 1.701 5.37599 2.2695C5.27474 2.82225 5.25524 3.498 5.25074 4.3095C5.24994 4.45868 5.30845 4.60207 5.41337 4.70813C5.5183 4.81418 5.66106 4.8742 5.81024 4.875C5.95942 4.8758 6.10282 4.8173 6.20887 4.71237C6.31492 4.60744 6.37494 4.46468 6.37574 4.3155C6.38024 3.49575 6.40124 2.9145 6.48224 2.47275C6.56099 2.04825 6.68624 1.8015 6.86849 1.61925C7.07624 1.4115 7.36799 1.2765 7.91849 1.20225C8.48474 1.1265 9.23549 1.125 10.3117 1.125H11.0617C12.1387 1.125 12.8895 1.1265 13.4557 1.20225C14.0062 1.2765 14.2972 1.41225 14.5057 1.61925C14.7142 1.82625 14.8477 2.118 14.922 2.66925C14.9985 3.23475 14.9992 3.98625 14.9992 5.0625V11.0625C14.9992 12.1388 14.9985 12.8902 14.922 13.4565C14.8477 14.007 14.7127 14.298 14.505 14.5057C14.2972 14.7135 14.0062 14.8485 13.4557 14.9227C12.8895 14.9985 12.1387 15 11.0617 15H10.3117C9.23549 15 8.48474 14.9985 7.91774 14.9227C7.36799 14.8485 7.07624 14.7127 6.86849 14.5057C6.68624 14.3235 6.56099 14.0767 6.48224 13.6522C6.40124 13.2105 6.38024 12.6293 6.37574 11.8095C6.37535 11.7356 6.36041 11.6626 6.33177 11.5945C6.30314 11.5264 6.26138 11.4646 6.20887 11.4126C6.15636 11.3607 6.09413 11.3196 6.02573 11.2917C5.95733 11.2638 5.88411 11.2496 5.81024 11.25C5.73637 11.2504 5.6633 11.2653 5.59521 11.294C5.52711 11.3226 5.46533 11.3644 5.41337 11.4169C5.36142 11.4694 5.32031 11.5316 5.29241 11.6C5.26451 11.6684 5.25035 11.7416 5.25074 11.8155C5.25524 12.627 5.27474 13.3028 5.37599 13.8555C5.48099 14.424 5.67974 14.9078 6.07349 15.3015C6.52424 15.753 7.09349 15.9465 7.76849 16.038C8.41799 16.125 9.24524 16.125 10.2705 16.125H11.103C12.129 16.125 12.9555 16.125 13.6057 16.0373C14.2807 15.9472 14.8492 15.7523 15.3007 15.3015C15.7522 14.85 15.9457 14.2815 16.0372 13.6065C16.1242 12.9563 16.1242 12.129 16.1242 11.1038V5.02125C16.1242 3.996 16.1242 3.16875 16.0372 2.5185C15.9465 1.8435 15.7522 1.275 15.3007 0.8235C14.8492 0.372 14.2807 0.1785 13.6057 0.08775C12.9555 -1.11759e-08 12.1282 0 11.103 0H10.2705Z"></path><path d="M0.5625 7.4993C0.413316 7.4993 0.270242 7.55856 0.164752 7.66405C0.0592632 7.76954 0 7.91261 0 8.0618C0 8.21098 0.0592632 8.35406 0.164752 8.45954C0.270242 8.56503 0.413316 8.6243 0.5625 8.6243H9.54225L8.0715 9.8843C8.01536 9.93236 7.96924 9.99101 7.93576 10.0569C7.90229 10.1228 7.88212 10.1946 7.87641 10.2683C7.86488 10.4171 7.91293 10.5644 8.01 10.6778C8.10707 10.7912 8.2452 10.8614 8.39401 10.8729C8.54282 10.8844 8.69012 10.8364 8.8035 10.7393L11.4285 8.4893C11.4903 8.43649 11.5398 8.37093 11.5738 8.29713C11.6078 8.22334 11.6254 8.14305 11.6254 8.0618C11.6254 7.98055 11.6078 7.90026 11.5738 7.82646C11.5398 7.75266 11.4903 7.6871 11.4285 7.6343L8.8035 5.3843C8.69012 5.28723 8.54282 5.23917 8.39401 5.25071C8.2452 5.26224 8.10707 5.33242 8.01 5.4458C7.91293 5.55918 7.86488 5.70647 7.87641 5.85528C7.88794 6.00409 7.95812 6.14223 8.0715 6.2393L9.5415 7.4993H0.5625Z"></path></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas-area has-theme-yellow" data-lenis-prevent>
+            <div class="offcanvas-wrapper">
+                <div class="offcanvas-content">
+                    <div class="offcanvas-top d-flex justify-content-between align-items-center mb-20">
+                        <div class="offcanvas-logo">
+                            <a class="logo-black" href="index.html"><img src="assets/images/logo/logo-blue.webp" alt="JS English Academy"></a>
+                        </div>
+                        <div class="offcanvas-close">
+                            <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines"><span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offcanvas-about mb-30 d-none d-xl-block">
+                        <p>JS English Academy is a leading institute helping students and professionals improve their English communication, soft skills, and overall personality through practical training.</p>
+                    </div>
+                    <div class="mobile-menu"><div class="rs-offcanvas-menu mb-30"><nav></nav></div></div>
+                    <div class="offcanvas-contact mb-30">
+                        <h4 class="offcanvas-title-meta">Contact Info</h4>
+                        <ul>
+                            <li class="d-flex gap-15"><div class="offcanvas-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M11.8768 9.68475C11.3059 10.835 10.5331 11.9818 9.74128 13.0109C8.95198 14.0368 8.15999 14.9249 7.5643 15.5572C7.48514 15.6412 7.40956 15.7206 7.33802 15.7951C7.26648 15.7206 7.1909 15.6412 7.11174 15.5572C6.51605 14.9249 5.72406 14.0368 4.93476 13.0109C4.14299 11.9818 3.37019 10.835 2.79925 9.68475C2.22242 8.52266 1.89032 7.43373 1.89032 6.5C1.89032 3.50846 4.32934 1.08333 7.33802 1.08333C10.3467 1.08333 12.7857 3.50846 12.7857 6.5C12.7857 7.43373 12.4536 8.52266 11.8768 9.68475ZM7.33802 17.3333C7.33802 17.3333 13.8753 11.1732 13.8753 6.5C13.8753 2.91015 10.9484 0 7.33802 0C3.7276 0 0.800781 2.91015 0.800781 6.5C0.800781 11.1732 7.33802 17.3333 7.33802 17.3333Z" fill="#6D6D6D"></path></svg></div><div class="offcanvas-contact-text"><a href="#">Chennai, Tamilnadu</a></div></li>
+                            <li class="d-flex gap-15"><div class="offcanvas-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.65387 1.32849C3.40343 1.00649 2.92745 0.976861 2.639 1.26531L1.60508 2.29923C1.1216 2.78271 0.94387 3.46766 1.1551 4.06847C2.00338 6.48124 3.39215 8.74671 5.32272 10.6773C7.25329 12.6078 9.51876 13.9966 11.9315 14.8449C12.5323 15.0561 13.2173 14.8784 13.7008 14.3949L14.7347 13.361C15.0231 13.0726 14.9935 12.5966 14.6715 12.3461L12.3653 10.5524C12.2008 10.4245 11.9866 10.3793 11.7845 10.4298L9.59541 10.9771C9.00082 11.1257 8.37183 10.9515 7.93845 10.5181L5.48187 8.06155C5.04849 7.62817 4.87427 6.99919 5.02292 6.40459L5.57019 4.21553C5.62073 4.01336 5.57552 3.79918 5.44758 3.63468L3.65387 1.32849Z" fill="#6D6D6D"></path></svg></div><div class="offcanvas-contact-text"><a href="tel:8754476502">87544 76502</a></div></li>
+                            <li class="d-flex gap-15"><div class="offcanvas-contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2C0.895431 2 0 2.89543 0 4V12L2.58386e-05 12.0103C0.00555998 13.1101 0.898859 14 2 14H7.5C7.77614 14 8 13.7761 8 13.5C8 13.2239 7.77614 13 7.5 13H2C1.53715 13 1.14774 12.6855 1.03376 12.2586L6.67417 8.7876L8 9.5831L15 5.3831V8.5C15 8.77614 15.2239 9 15.5 9C15.7761 9 16 8.77614 16 8.5V4C16 2.89543 15.1046 2 14 2H2ZM5.70808 8.20794L1 11.1052V5.3831L5.70808 8.20794Z" fill="#6D6D6D"></path></svg></div><div class="offcanvas-contact-text"><a href="mailto:jsacademy@gmail.com">jsacademy@gmail.com</a></div></li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-social">
+                        <h4 class="offcanvas-title-meta">Follow Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-overlay"></div>
+    <div class="offcanvas-overlay-white"></div>
+    <!-- Offcanvas area end -->
+
+    <!-- Body main wrapper start -->
+    <main>
+
+        <!-- banner area start -->
+        <section class="rs-banner-area rs-banner-eight rs-swiper">
+            <div class="rs-banner-slider-wrapper">
+                <div class="swiper" data-clone-slides="false" data-loop="false" data-speed="1500" data-autoplay="true" data-dots-dynamic="false" data-center-mode="false" data-effect="fade" data-no-gap="true" data-auto-height="true" data-observer="true" data-observe-parents="true" data-delay="2000" data-item="1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="rs-banner-wrapper">
+                                <div class="rs-banner-bg-thumb include-bg" data-background="assets/images/bg/banner-bg-thumb-09.webp"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xxl-5 col-xl-6 col-lg-7">
+                                            <div class="rs-banner-item">
+                                                <div class="rs-banner-content-wrapper">
+                                                    <span class="rs-banner-subtitle">Welcome to JS English Academy</span>
+                                                    <h1 class="rs-banner-title">Speak English <br> with Confidence</h1>
+                                                    <div class="rs-banner-btn">
+                                                        <a href="courses.html" class="rs-btn has-icon has-theme-yellow hover-yellow">
+                                                            <span class="btn-text-wrap"><span class="text-default">Explore Courses</span><span class="text-hover">Explore Courses</span></span>
+                                                            <span class="icon-box has-rotate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15"><path d="M10.5 7.5C10.5 8.32843 9.82843 9 9 9C8.17157 9 7.5 8.32843 7.5 7.5C7.5 6.67157 8.17157 6 9 6C9.82843 6 10.5 6.67157 10.5 7.5Z"></path><path d="M10.5 13.5C10.5 14.3284 9.82843 15 9 15C8.17157 15 7.5 14.3284 7.5 13.5C7.5 12.6716 8.17157 12 9 12C9.82843 12 10.5 12.6716 10.5 13.5Z"></path><path d="M3 7.5C3 8.32843 2.32843 9 1.5 9C0.671573 9 0 8.32843 0 7.5C0 6.67157 0.671573 6 1.5 6C2.32843 6 3 6.67157 3 7.5Z"></path><path d="M18 7.5C18 8.32843 17.3284 9 16.5 9C15.6716 9 15 8.32843 15 7.5C15 6.67157 15.6716 6 16.5 6C17.3284 6 18 6.67157 18 7.5Z"></path><path d="M10.5 1.5C10.5 2.32843 9.82843 3 9 3C8.17157 3 7.5 2.32843 7.5 1.5C7.5 0.671573 8.17157 0 9 0C9.82843 0 10.5 0.671573 10.5 1.5Z"></path></svg></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="rs-banner-wrapper">
+                                <div class="rs-banner-bg-thumb include-bg" data-background="assets/images/bg/banner-bg-thumb-10.webp"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-7 col-lg-8">
+                                            <div class="rs-banner-item">
+                                                <div class="rs-banner-content-wrapper">
+                                                    <span class="rs-banner-subtitle">Welcome to JS English Academy</span>
+                                                    <h1 class="rs-banner-title">Master Communication & Soft Skills</h1>
+                                                    <div class="rs-banner-btn">
+                                                        <a href="courses.html" class="rs-btn has-icon has-theme-yellow hover-yellow">
+                                                            <span class="btn-text-wrap"><span class="text-default">Explore Courses</span><span class="text-hover">Explore Courses</span></span>
+                                                            <span class="icon-box has-rotate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15"><path d="M10.5 7.5C10.5 8.32843 9.82843 9 9 9C8.17157 9 7.5 8.32843 7.5 7.5C7.5 6.67157 8.17157 6 9 6C9.82843 6 10.5 6.67157 10.5 7.5Z"></path><path d="M10.5 13.5C10.5 14.3284 9.82843 15 9 15C8.17157 15 7.5 14.3284 7.5 13.5C7.5 12.6716 8.17157 12 9 12C9.82843 12 10.5 12.6716 10.5 13.5Z"></path><path d="M3 7.5C3 8.32843 2.32843 9 1.5 9C0.671573 9 0 8.32843 0 7.5C0 6.67157 0.671573 6 1.5 6C2.32843 6 3 6.67157 3 7.5Z"></path><path d="M18 7.5C18 8.32843 17.3284 9 16.5 9C15.6716 9 15 8.32843 15 7.5C15 6.67157 15.6716 6 16.5 6C17.3284 6 18 6.67157 18 7.5Z"></path><path d="M10.5 1.5C10.5 2.32843 9.82843 3 9 3C8.17157 3 7.5 2.32843 7.5 1.5C7.5 0.671573 8.17157 0 9 0C9.82843 0 10.5 0.671573 10.5 1.5Z"></path></svg></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rs-banner-pagination"><div class="swiper-pagination rs-pagination"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner area end -->
+
+        <!-- funfact area start -->
+        <section class="rs-funfact-area bg-primary section-space-bottom rs-funfact-one has-theme-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="rs-funfact-wrapper">
+                            <div class="rs-funfact-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                                <div class="rs-funfact-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M36.6614 36.1296C36.4034 36.043 36.156 36.1116 35.9075 36.194C33.4207 37.0646 30.5152 37.0727 27.9573 36.1491C27.6165 35.9894 27.1702 36.1909 26.8362 36.2761C20.7058 38.0808 12.9148 40.8913 10.6126 44.0319C9.31863 45.7917 8.60819 49.4909 8.50076 55.0251C8.44168 57.9001 10.49 60.362 13.2678 60.7526C17.7078 61.363 24.5613 62.0895 31.9998 62.0895C39.4378 62.0895 46.2918 61.363 50.7351 60.7526C53.51 60.362 55.5579 57.9001 55.4988 55.0261C55.3923 49.4909 54.6819 45.7927 53.3875 44.0319C51.0413 40.8308 42.9969 37.9675 36.6614 36.1296ZM27.5916 38.1384C30.4582 39.0911 33.6262 39.0686 36.4041 38.1374C38.867 38.8589 41.0872 39.5944 43.0394 40.327C41.3474 51.2343 22.5523 51.097 21.0064 40.3095C22.9702 39.5709 25.1833 38.838 27.5916 38.1384Z"></path></svg>
+                                </div>
+                                <div class="rs-funfact-content">
+                                    <h5 class="rs-funfact-title">500+ Students Trained</h5>
+                                    <p class="rs-funfact-desc">Over 500 students successfully trained in English communication.</p>
+                                </div>
+                            </div>
+                            <div class="rs-funfact-item wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                                <div class="rs-funfact-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M31.3391 12.1666V4.49711C31.3391 4.13197 31.6352 3.83594 32.0003 3.83594C32.3655 3.83594 32.6615 4.13197 32.6615 4.49711V12.1666C32.6615 12.5317 32.3654 12.8277 32.0003 12.8277C31.6352 12.8277 31.3391 12.5317 31.3391 12.1666Z"></path><path d="M36.8488 4.54117C37.0941 4.54119 37.3191 4.67695 37.4335 4.89384C37.548 5.11076 37.533 5.37325 37.3945 5.57566L36.5109 6.86694L37.3848 8.07699C37.5302 8.27826 37.5504 8.54398 37.4374 8.76503C37.3244 8.98608 37.0971 9.12523 36.8488 9.12525H32.0003C31.6352 9.12525 31.3391 8.82921 31.3391 8.46407V5.20235C31.3391 4.8372 31.6352 4.54117 32.0003 4.54117H36.8488Z"></path></svg>
+                                </div>
+                                <div class="rs-funfact-content">
+                                    <h5 class="rs-funfact-title">4 Expert Courses</h5>
+                                    <p class="rs-funfact-desc">Comprehensive courses for all skill levels and needs.</p>
+                                </div>
+                            </div>
+                            <div class="rs-funfact-item wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                                <div class="rs-funfact-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M49.409 52.3099H37.6849C34.0689 49.2562 32.0349 45.2976 32.0349 41.101C32.0349 32.9351 37.3918 26.5705 45.6374 24.51L39.0989 21.4073L30.2205 25.6204C27.4538 28.6099 25.7424 32.2858 25.2769 36.2699C24.392 43.5188 30.9904 49.6852 34.334 52.3099H31.0622C27.2962 48.9747 22.1212 43.0356 22.9711 36.0788C23.471 31.7932 25.3087 27.8248 28.2726 24.5705L30.364 16.1163L23.1864 10.6631C15.4354 14.1528 11.9201 24.0257 14.6435 35.025C16.498 42.4732 21.1426 48.8924 27.116 52.3099H14.3175L7 63.0305H56.7266L49.409 52.3099Z"></path></svg>
+                                </div>
+                                <div class="rs-funfact-content">
+                                    <h5 class="rs-funfact-title">100% Practical Training</h5>
+                                    <p class="rs-funfact-desc">Student-first approach with hands-on learning methods.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- funfact area end -->
+
+        <!-- about area start -->
+        <section class="rs-about-area section-space-bottom rs-about-eight bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="rs-about-wrapper">
+                            <div class="rs-about-thumb-wrapper">
+                                <div class="rs-about-thumb thumb-one"><img src="assets/images/about/about-thumb-21.webp" alt="JS English Academy"></div>
+                                <div class="rs-about-thumb thumb-two"><img src="assets/images/about/about-thumb-14.webp" alt="English Training"></div>
+                                <div class="rs-about-badge"><img src="assets/images/shape/badge-shape.webp" alt="badge"></div>
+                                <div class="rs-about-meta-info">
+                                    <div class="rs-about-meta-thumb"><img src="assets/images/user/client-group-two.webp" alt="students"></div>
+                                    <div class="rs-about-counter">
+                                        <div class="rs-counter-number-wrapper"><span class="rs-counter-number odometer" data-count="500">00</span><span class="prefix">+</span></div>
+                                        <span class="rs-counter-title">Students Trained</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rs-about-content-wrapper">
+                                <div class="section-title-wrapper">
+                                    <span class="section-subtitle has-dark-grey is-uppercase">About JS English Academy</span>
+                                    <h2 class="section-title-two rs-split-text-enable split-in-left mb-20">Empowering students through practical English training</h2>
+                                    <p class="section-desc">JS English Academy is a leading institute helping students and professionals improve their English communication, soft skills, and overall personality. Our practical training methods and student-first approach make learning simple, effective, and enjoyable.</p>
+                                    <div class="rs-about-features-wrapper">
+                                        <div class="rs-about-list-wrapper">
+                                            <div class="rs-about-list-item"><div class="rs-about-list-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path d="M6.39959 12.3594C6.35715 12.3594 6.31517 12.3506 6.27629 12.3336C6.2374 12.3166 6.20246 12.2917 6.17365 12.2606L0.0817469 5.67088C0.0411367 5.62695 0.0142147 5.57213 0.00427583 5.51313C-0.00566304 5.45414 0.00181231 5.39352 0.0257871 5.33871C0.0497619 5.2839 0.0891961 5.23726 0.139263 5.20452C0.189331 5.17177 0.247859 5.15433 0.307685 5.15432H3.23999C3.28402 5.15433 3.32753 5.16378 3.3676 5.18203C3.40766 5.20029 3.44334 5.22692 3.47224 5.26014L5.50818 7.60242C5.72821 7.13208 6.15415 6.34894 6.90159 5.39466C8.00658 3.98389 10.0619 1.90909 13.5783 0.0361075C13.6463 -8.57115e-05 13.7254 -0.00947928 13.7999 0.00978174C13.8745 0.0290428 13.9391 0.0755582 13.981 0.140143C14.023 0.204728 14.0392 0.282687 14.0264 0.358628C14.0137 0.434568 13.9729 0.502968 13.9122 0.550323C13.8988 0.560815 12.5429 1.62851 10.9826 3.58417C9.54652 5.38386 7.63753 8.32663 6.69818 12.1257C6.68168 12.1925 6.6433 12.2517 6.58916 12.2941C6.53503 12.3365 6.46835 12.3594 6.39959 12.3594Z"></path></svg></div><p>Communicative & Spoken English</p></div>
+                                            <div class="rs-about-list-item"><div class="rs-about-list-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path d="M6.39959 12.3594C6.35715 12.3594 6.31517 12.3506 6.27629 12.3336C6.2374 12.3166 6.20246 12.2917 6.17365 12.2606L0.0817469 5.67088C0.0411367 5.62695 0.0142147 5.57213 0.00427583 5.51313C-0.00566304 5.45414 0.00181231 5.39352 0.0257871 5.33871C0.0497619 5.2839 0.0891961 5.23726 0.139263 5.20452C0.189331 5.17177 0.247859 5.15433 0.307685 5.15432H3.23999C3.28402 5.15433 3.32753 5.16378 3.3676 5.18203C3.40766 5.20029 3.44334 5.22692 3.47224 5.26014L5.50818 7.60242C5.72821 7.13208 6.15415 6.34894 6.90159 5.39466C8.00658 3.98389 10.0619 1.90909 13.5783 0.0361075C13.6463 -8.57115e-05 13.7254 -0.00947928 13.7999 0.00978174C13.8745 0.0290428 13.9391 0.0755582 13.981 0.140143C14.023 0.204728 14.0392 0.282687 14.0264 0.358628C14.0137 0.434568 13.9729 0.502968 13.9122 0.550323C13.8988 0.560815 12.5429 1.62851 10.9826 3.58417C9.54652 5.38386 7.63753 8.32663 6.69818 12.1257C6.68168 12.1925 6.6433 12.2517 6.58916 12.2941C6.53503 12.3365 6.46835 12.3594 6.39959 12.3594Z"></path></svg></div><p>Voice & Accent Training</p></div>
+                                            <div class="rs-about-list-item"><div class="rs-about-list-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path d="M6.39959 12.3594C6.35715 12.3594 6.31517 12.3506 6.27629 12.3336C6.2374 12.3166 6.20246 12.2917 6.17365 12.2606L0.0817469 5.67088C0.0411367 5.62695 0.0142147 5.57213 0.00427583 5.51313C-0.00566304 5.45414 0.00181231 5.39352 0.0257871 5.33871C0.0497619 5.2839 0.0891961 5.23726 0.139263 5.20452C0.189331 5.17177 0.247859 5.15433 0.307685 5.15432H3.23999C3.28402 5.15433 3.32753 5.16378 3.3676 5.18203C3.40766 5.20029 3.44334 5.22692 3.47224 5.26014L5.50818 7.60242C5.72821 7.13208 6.15415 6.34894 6.90159 5.39466C8.00658 3.98389 10.0619 1.90909 13.5783 0.0361075C13.6463 -8.57115e-05 13.7254 -0.00947928 13.7999 0.00978174C13.8745 0.0290428 13.9391 0.0755582 13.981 0.140143C14.023 0.204728 14.0392 0.282687 14.0264 0.358628C14.0137 0.434568 13.9729 0.502968 13.9122 0.550323C13.8988 0.560815 12.5429 1.62851 10.9826 3.58417C9.54652 5.38386 7.63753 8.32663 6.69818 12.1257C6.68168 12.1925 6.6433 12.2517 6.58916 12.2941C6.53503 12.3365 6.46835 12.3594 6.39959 12.3594Z"></path></svg></div><p>Interview & Corporate Training</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-about-btn">
+                                    <a class="rs-btn has-icon has-theme-yellow hover-blue" href="courses.html">
+                                        <span class="btn-text-wrap"><span class="text-default">View All Courses</span><span class="text-hover">View All Courses</span></span>
+                                        <span class="icon-box has-rotate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15"><path d="M10.5 7.5C10.5 8.32843 9.82843 9 9 9C8.17157 9 7.5 8.32843 7.5 7.5C7.5 6.67157 8.17157 6 9 6C9.82843 6 10.5 6.67157 10.5 7.5Z"></path><path d="M10.5 13.5C10.5 14.3284 9.82843 15 9 15C8.17157 15 7.5 14.3284 7.5 13.5C7.5 12.6716 8.17157 12 9 12C9.82843 12 10.5 12.6716 10.5 13.5Z"></path><path d="M3 7.5C3 8.32843 2.32843 9 1.5 9C0.671573 9 0 8.32843 0 7.5C0 6.67157 0.671573 6 1.5 6C2.32843 6 3 6.67157 3 7.5Z"></path><path d="M18 7.5C18 8.32843 17.3284 9 16.5 9C15.6716 9 15 8.32843 15 7.5C15 6.67157 15.6716 6 16.5 6C17.3284 6 18 6.67157 18 7.5Z"></path><path d="M10.5 1.5C10.5 2.32843 9.82843 3 9 3C8.17157 3 7.5 2.32843 7.5 1.5C7.5 0.671573 8.17157 0 9 0C9.82843 0 10.5 0.671573 10.5 1.5Z"></path></svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about area end -->
+
+        <!-- courses/faculty slider area start -->
+        <section class="rs-faculty-area rs-faculty-two section-space has-theme-blue rs-swiper jarallax">
+            <div class="rs-faculty-bg-thumb include-bg jarallax-img" data-background="assets/images/bg/faculty-bg-thumb-01.webp"></div>
+            <div class="container">
+                <div class="row align-items-center g-5 section-title-space">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-title-wrapper">
+                            <span class="section-subtitle is-uppercase has-theme-yellow">Our Courses</span>
+                            <h2 class="section-title-two rs-split-text-enable split-in-left is-white mb-15">Courses We Offer</h2>
+                            <p class="section-desc is-white">Practical training to improve your English and soft skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-4">
+                        <div class="rs-event-btn d-flex justify-content-lg-end">
+                            <a class="rs-btn has-icon has-theme-yellow hover-white" href="courses.html">
+                                <span class="btn-text-wrap"><span class="text-default">View All Courses</span><span class="text-hover">View All Courses</span></span>
+                                <span class="icon-box has-rotate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15"><path d="M10.5 7.5C10.5 8.32843 9.82843 9 9 9C8.17157 9 7.5 8.32843 7.5 7.5C7.5 6.67157 8.17157 6 9 6C9.82843 6 10.5 6.67157 10.5 7.5Z"></path><path d="M10.5 13.5C10.5 14.3284 9.82843 15 9 15C8.17157 15 7.5 14.3284 7.5 13.5C7.5 12.6716 8.17157 12 9 12C9.82843 12 10.5 12.6716 10.5 13.5Z"></path><path d="M3 7.5C3 8.32843 2.32843 9 1.5 9C0.671573 9 0 8.32843 0 7.5C0 6.67157 0.671573 6 1.5 6C2.32843 6 3 6.67157 3 7.5Z"></path><path d="M18 7.5C18 8.32843 17.3284 9 16.5 9C15.6716 9 15 8.32843 15 7.5C15 6.67157 15.6716 6 16.5 6C17.3284 6 18 6.67157 18 7.5Z"></path><path d="M10.5 1.5C10.5 2.32843 9.82843 3 9 3C8.17157 3 7.5 2.32843 7.5 1.5C7.5 0.671573 8.17157 0 9 0C9.82843 0 10.5 0.671573 10.5 1.5Z"></path></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="rs-faculty-slide-wrapper">
+                            <div class="swiper" data-clone-slides="false" data-loop="true" data-speed="1500" data-autoplay="true" data-dots-dynamic="false" data-effect="false" data-delay="2000" data-item="3" data-item-xl="3" data-item-lg="3" data-item-md="2" data-item-sm="1" data-item-xs="1" data-margin="30">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="rs-faculty-item">
+                                            <div class="rs-faculty-thumb">
+                                                <img src="assets/images/faculty/faculty-thumb-09.webp" alt="Communicative & Spoken English">
+                                                <div class="rs-faculty-info">
+                                                    <h5 class="rs-faculty-title"><a href="courses.html">Communicative & Spoken English</a></h5>
+                                                    <div class="rs-faculty-btn"><a class="rs-btn has-icon has-text is-text-white" href="courses.html">Learn More<span class="icon-box"><svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg><svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-faculty-item">
+                                            <div class="rs-faculty-thumb">
+                                                <img src="assets/images/faculty/faculty-thumb-05.webp" alt="Voice & Accent Training">
+                                                <div class="rs-faculty-info">
+                                                    <h5 class="rs-faculty-title"><a href="courses.html">Voice & Accent Training</a></h5>
+                                                    <div class="rs-faculty-btn"><a class="rs-btn has-icon has-text is-text-white" href="courses.html">Learn More<span class="icon-box"><svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg><svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-faculty-item">
+                                            <div class="rs-faculty-thumb">
+                                                <img src="assets/images/faculty/faculty-thumb-03.webp" alt="Soft Skills & Personality Development">
+                                                <div class="rs-faculty-info">
+                                                    <h5 class="rs-faculty-title"><a href="courses.html">Soft Skills & Personality Development</a></h5>
+                                                    <div class="rs-faculty-btn"><a class="rs-btn has-icon has-text is-text-white" href="courses.html">Learn More<span class="icon-box"><svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg><svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-faculty-item">
+                                            <div class="rs-faculty-thumb">
+                                                <img src="assets/images/faculty/faculty-thumb-10.webp" alt="Interview & Corporate Training">
+                                                <div class="rs-faculty-info">
+                                                    <h5 class="rs-faculty-title"><a href="courses.html">Interview & Corporate Training</a></h5>
+                                                    <div class="rs-faculty-btn"><a class="rs-btn has-icon has-text is-text-white" href="courses.html">Learn More<span class="icon-box"><svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg><svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M11.5908 13.8593H10.5176C10.3122 10.089 12.6466 8.11151 13.8261 7.53333H0V6.37722H13.8261C10.9952 4.82655 10.2975 1.82452 10.5191 0H11.5819C11.1221 4.49988 15.8553 6.37148 17.8797 6.37722V7.52259C12.0065 8.19889 11.3576 12.4215 11.5908 13.8593Z"></path></svg></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-faculty-pagination"><div class="swiper-pagination rs-pagination has-before-none has-theme-blue has-transparent"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- courses/faculty slider area end -->
+
+        <!-- text slider area start -->
+        <div class="rs-text-slide-area rs-text-slide-one pt-60 bg-primary">
+            <div class="rs-text-slide-wrapper">
+                <div class="gsap-marquee right speed-20 move-to-1000">
+                    <div class="rs-text-slide-inner">
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Improve Your English Communication</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Master Soft Skills & Personality</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Voice & Accent Training</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Interview & Corporate Training</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Practical Student-First Approach</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Improve Your English Communication</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Master Soft Skills & Personality</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                        <div class="rs-text-slide-item"><h2 class="rs-text-slide-title">Voice & Accent Training</h2><div class="rs-text-slide-thumb"><img src="assets/images/shape/badge-shape-two.webp" alt="icon"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- text slider area end -->
+
+        <!-- tuition area start -->
+        <section class="rs-tuition-area section-space-bottom rs-tuition-one secondary-bg">
+            <div class="rs-tuition-shape-one"><img src="assets/images/shape/graduation-doc-shape-two.webp" alt="shape"></div>
+            <div class="rs-tuition-shape-two gsap-move up-100"><img src="assets/images/shape/wave-line-shape.webp" alt="shape"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="rs-tuition-wrapper">
+                            <div class="rs-tuition-sec-wrapper">
+                                <div class="section-title-wrapper">
+                                    <span class="section-subtitle has-dark-grey is-uppercase">Our Courses</span>
+                                    <h2 class="section-title-two rs-split-text-enable split-in-left mb-20">Course Offerings at JS English Academy</h2>
+                                    <p class="section-desc">We offer practical, student-first training programs designed to improve your English communication and soft skills effectively.</p>
+                                </div>
+                                <div class="rs-tuition-btn">
+                                    <a class="rs-btn has-icon has-theme-yellow hover-blue" href="courses.html">
+                                        <span class="btn-text-wrap"><span class="text-default">View All Courses</span><span class="text-hover">View All Courses</span></span>
+                                        <span class="icon-box has-rotate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15"><path d="M10.5 7.5C10.5 8.32843 9.82843 9 9 9C8.17157 9 7.5 8.32843 7.5 7.5C7.5 6.67157 8.17157 6 9 6C9.82843 6 10.5 6.67157 10.5 7.5Z"></path><path d="M10.5 13.5C10.5 14.3284 9.82843 15 9 15C8.17157 15 7.5 14.3284 7.5 13.5C7.5 12.6716 8.17157 12 9 12C9.82843 12 10.5 12.6716 10.5 13.5Z"></path><path d="M3 7.5C3 8.32843 2.32843 9 1.5 9C0.671573 9 0 8.32843 0 7.5C0 6.67157 0.671573 6 1.5 6C2.32843 6 3 6.67157 3 7.5Z"></path><path d="M18 7.5C18 8.32843 17.3284 9 16.5 9C15.6716 9 15 8.32843 15 7.5C15 6.67157 15.6716 6 16.5 6C17.3284 6 18 6.67157 18 7.5Z"></path><path d="M10.5 1.5C10.5 2.32843 9.82843 3 9 3C8.17157 3 7.5 2.32843 7.5 1.5C7.5 0.671573 8.17157 0 9 0C9.82843 0 10.5 0.671573 10.5 1.5Z"></path></svg></span>
+                                    </a>
+                                </div>
+                                <div class="rs-tuition-thumb wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s"><img src="assets/images/tuition/tuition-thumb-01.webp" alt="JS English Academy"></div>
+                            </div>
+                            <div class="rs-tuition-content-wrapper">
+                                <div class="rs-tuition-item wow fadeIn" data-wow-delay=".4s" data-wow-duration="1s">
+                                    <div class="rs-tuition-top"><h5 class="rs-tuition-title">Spoken English</h5></div>
+                                    <div class="rs-tuition-info-wrapper">
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Communicative & Spoken English</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">3 Months</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Level:</span><span class="rs-tuition-price">Beginner to Advanced</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Voice & Accent Training</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">2 Months</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Focus:</span><span class="rs-tuition-price">Pronunciation & Clarity</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-tuition-item has-theme-blue-two wow fadeIn" data-wow-delay=".5s" data-wow-duration="1s">
+                                    <div class="rs-tuition-top"><h5 class="rs-tuition-title">Soft Skills</h5></div>
+                                    <div class="rs-tuition-info-wrapper">
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Personality Development</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">2 Months</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Focus:</span><span class="rs-tuition-price">Confidence Building</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Interview Training</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">1 Month</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Focus:</span><span class="rs-tuition-price">Mock Interviews & GD</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-tuition-item has-theme-blue-two wow fadeIn" data-wow-delay=".6s" data-wow-duration="1s">
+                                    <div class="rs-tuition-top"><h5 class="rs-tuition-title">Corporate Training</h5></div>
+                                    <div class="rs-tuition-info-wrapper">
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Business Communication</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">Customized</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Mode:</span><span class="rs-tuition-price">Online & Offline</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Presentation Skills</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">2 Weeks</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Focus:</span><span class="rs-tuition-price">Public Speaking</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-tuition-item wow fadeIn" data-wow-delay=".7s" data-wow-duration="1s">
+                                    <div class="rs-tuition-top"><h5 class="rs-tuition-title">Custom Programs</h5></div>
+                                    <div class="rs-tuition-info-wrapper">
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">One-on-One Training</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Duration:</span><span class="rs-tuition-price">Flexible</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Mode:</span><span class="rs-tuition-price">Personalized</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="rs-tuition-info-item">
+                                            <h6 class="rs-tuition-inner-title">Group Sessions</h6>
+                                            <ul class="rs-tuition-list">
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Batch Size:</span><span class="rs-tuition-price">Small Groups</span></li>
+                                                <li class="rs-tuition-list-item"><span class="rs-tuition-label">Focus:</span><span class="rs-tuition-price">Interactive Learning</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tuition area end -->
+
+        <!-- testimonial area start -->
+        <section class="rs-testimonial-area rs-testimonial-three has-theme-blue-two section-space rs-swiper jarallax">
+            <div class="rs-testimonial-bg-thumb include-bg jarallax-img" data-background="assets/images/bg/testimonial-bg-thumb-02.webp"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-10">
+                        <div class="section-title-wrapper section-title-space text-center">
+                            <span class="section-subtitle has-theme-yellow is-uppercase justify-content-center">Student Feedback</span>
+                            <h2 class="section-title-two rs-split-text-enable split-in-left mb-15 is-white">What Our Students Say</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-xl-12">
+                        <div class="rs-testimonial-slider-wrapper">
+                            <div class="swiper" data-clone-slides="false" data-loop="true" data-speed="1500" data-autoplay="true" data-dots-dynamic="false" data-effect="false" data-delay="2000" data-item="3" data-item-xl="3" data-item-lg="2" data-item-md="2" data-item-sm="1" data-item-xs="1" data-margin="30">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="rs-testimonial-item">
+                                            <div class="rs-testimonial-avater-wrapper">
+                                                <div class="rs-testimonial-avater-info">
+                                                    <h5 class="rs-testimonial-avater-title">Priya S.</h5>
+                                                    <span class="rs-testimonial-avater-designation">Student</span>
+                                                </div>
+                                                <div class="rs-testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 44"><path d="M0.228171 11.5356C1.61659 3.91031 8.93392 -1.15945 16.5592 0.228969C24.1843 1.61757 29.2304 9.22121 28.6354 16.604C27.9522 25.1769 22.4433 35.8439 9.88149 43.1606C8.82381 43.7776 7.61132 42.5656 8.20571 41.4858C9.70432 38.709 11.6003 34.2348 12.7243 28.02C4.54547 27.239 -1.04913 19.7736 0.165671 11.9096L0.228171 11.5356Z"></path></svg></div>
+                                            </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <span class="rs-testimonial-rating">5.0</span>
+                                                <div class="rs-testimonial-rating-icon"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                            </div>
+                                            <p class="rs-testimonial-desc">JS English Academy transformed my communication skills. The practical training methods helped me speak English confidently in just 3 months!</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-testimonial-item">
+                                            <div class="rs-testimonial-avater-wrapper">
+                                                <div class="rs-testimonial-avater-info">
+                                                    <h5 class="rs-testimonial-avater-title">Rahul M.</h5>
+                                                    <span class="rs-testimonial-avater-designation">Working Professional</span>
+                                                </div>
+                                                <div class="rs-testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 44"><path d="M0.228171 11.5356C1.61659 3.91031 8.93392 -1.15945 16.5592 0.228969C24.1843 1.61757 29.2304 9.22121 28.6354 16.604C27.9522 25.1769 22.4433 35.8439 9.88149 43.1606C8.82381 43.7776 7.61132 42.5656 8.20571 41.4858C9.70432 38.709 11.6003 34.2348 12.7243 28.02C4.54547 27.239 -1.04913 19.7736 0.165671 11.9096L0.228171 11.5356Z"></path></svg></div>
+                                            </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <span class="rs-testimonial-rating">5.0</span>
+                                                <div class="rs-testimonial-rating-icon"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                            </div>
+                                            <p class="rs-testimonial-desc">The voice and accent training was excellent. My presentation skills improved dramatically, and I got promoted within 2 months of completing the course.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-testimonial-item">
+                                            <div class="rs-testimonial-avater-wrapper">
+                                                <div class="rs-testimonial-avater-info">
+                                                    <h5 class="rs-testimonial-avater-title">Ananya K.</h5>
+                                                    <span class="rs-testimonial-avater-designation">College Student</span>
+                                                </div>
+                                                <div class="rs-testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 44"><path d="M0.228171 11.5356C1.61659 3.91031 8.93392 -1.15945 16.5592 0.228969C24.1843 1.61757 29.2304 9.22121 28.6354 16.604C27.9522 25.1769 22.4433 35.8439 9.88149 43.1606C8.82381 43.7776 7.61132 42.5656 8.20571 41.4858C9.70432 38.709 11.6003 34.2348 12.7243 28.02C4.54547 27.239 -1.04913 19.7736 0.165671 11.9096L0.228171 11.5356Z"></path></svg></div>
+                                            </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <span class="rs-testimonial-rating">4.8</span>
+                                                <div class="rs-testimonial-rating-icon"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+                                            </div>
+                                            <p class="rs-testimonial-desc">The soft skills and personality development course boosted my confidence. The trainers are very supportive and the environment is great for learning.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-testimonial-item">
+                                            <div class="rs-testimonial-avater-wrapper">
+                                                <div class="rs-testimonial-avater-info">
+                                                    <h5 class="rs-testimonial-avater-title">Vikram R.</h5>
+                                                    <span class="rs-testimonial-avater-designation">Business Owner</span>
+                                                </div>
+                                                <div class="rs-testimonial-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 44"><path d="M0.228171 11.5356C1.61659 3.91031 8.93392 -1.15945 16.5592 0.228969C24.1843 1.61757 29.2304 9.22121 28.6354 16.604C27.9522 25.1769 22.4433 35.8439 9.88149 43.1606C8.82381 43.7776 7.61132 42.5656 8.20571 41.4858C9.70432 38.709 11.6003 34.2348 12.7243 28.02C4.54547 27.239 -1.04913 19.7736 0.165671 11.9096L0.228171 11.5356Z"></path></svg></div>
+                                            </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <span class="rs-testimonial-rating">5.0</span>
+                                                <div class="rs-testimonial-rating-icon"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                            </div>
+                                            <p class="rs-testimonial-desc">Corporate training from JS English Academy helped our team communicate better with international clients. Highly recommended for businesses!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-testimonial-pagination"><div class="swiper-pagination rs-pagination has-before-none has-theme-blue has-transparent"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonial area end -->
+
+        <!-- contact area start -->
+        <section class="rs-contact-area bg-primary rs-contact-one">
+            <div class="rs-contact-wrapper">
+                <div class="rs-contact-bg-thumb include-bg" data-background="assets/images/bg/contact-bg-thumb-01.webp"></div>
+                <div class="container">
+                    <div class="row align-items-end g-5">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="rs-contact-sec-wrapper">
+                                <div class="section-title-wrapper">
+                                    <span class="section-subtitle has-dark-grey is-uppercase">Enroll Today</span>
+                                    <h2 class="section-title-two rs-split-text-enable split-in-left mb-15">Start Your English Journey Now</h2>
+                                    <p class="rs-section-desc">Join JS English Academy and improve your communication skills with practical, student-first training methods.</p>
+                                </div>
+                                <div class="rs-contact-thumb-wrapper wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                                    <div class="rs-contact-bg-thumb-two" data-background="assets/images/bg/contact-bg-thumb-01.webp"></div>
+                                    <div class="rs-contact-thumb"><img src="assets/images/contact/contact-thumb-01.webp" alt="JS English Academy"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="rs-contact-form wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
+                                <div class="section-title-wrapper mb-30">
+                                    <h5 class="form-title rs-split-text-enable split-in-left mb-10">Enrollment Form</h5>
+                                </div>
+                                <form id="contact-form" action="mail.php" method="POST">
+                                    <div class="row rs-gutter-24">
+                                        <div class="col-md-6"><div class="rs-contact-input-box"><div class="rs-contact-input"><input name="name" type="text" placeholder="Full Name*" required></div></div></div>
+                                        <div class="col-md-6"><div class="rs-contact-input-box"><div class="rs-contact-input"><input name="email" type="email" placeholder="Email Address*" required></div></div></div>
+                                        <div class="col-md-6"><div class="rs-contact-input-box"><div class="rs-contact-input"><input name="phone" type="tel" placeholder="Phone Number*" required></div></div></div>
+                                        <div class="col-md-6"><div class="rs-contact-input-box"><div class="rs-contact-input"><select name="course" required><option value="" disabled selected>Select Course*</option><option value="Communicative & Spoken English">Communicative & Spoken English</option><option value="Voice & Accent Training">Voice & Accent Training</option><option value="Soft Skills & Personality Development">Soft Skills & Personality Development</option><option value="Interview & Corporate Training">Interview & Corporate Training</option></select></div></div></div>
+                                        <div class="col-md-12"><div class="rs-contact-input-box"><div class="rs-contact-input"><textarea name="message" placeholder="Message*" required></textarea></div></div></div>
+                                        <div class="col-md-12"><div class="rs-contact-btn"><button type="submit" class="rs-btn has-theme-yellow hover-white radius-6 w-100">Send Message</button></div></div>
+                                    </div>
+                                </form>
+                                <div id="form-messages"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact area end -->
+
+    </main>
+    <!-- Body main wrapper end -->
+
+    <!-- Sticky Contact Buttons -->
+    <div class="sticky-contact-buttons">
+        <a href="https://wa.me/918754476502" target="_blank" class="sticky-btn sticky-btn-whatsapp" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="sticky-btn-tooltip">Chat on WhatsApp</span>
+        </a>
+        <a href="tel:8754476502" class="sticky-btn sticky-btn-call" aria-label="Call Now">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span class="sticky-btn-tooltip">Call Now</span>
+        </a>
+    </div>
+
+    <!-- footer area start -->
+    <footer class="rs-footer-area rs-footer-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="rs-footer-wrapper">
+                        <div class="rs-footer-left">
+                            <div class="rs-footer-widget footer-1-col-1">
+                                <div class="rs-footer-widget-logo"><h3 class="rs-footer-brand-name">JS English Academy</h3></div>
+                                <div class="rs-footer-widget-content">
+                                    <p class="rs-footer-about-text">A leading institute helping students and professionals improve English communication, soft skills, and overall personality through practical training.</p>
+                                    <div class="rs-footer-widget-social">
+                                        <span class="rs-footer-social-title">Follow Us:</span>
+                                        <div class="rs-footer-social theme-social has-radius-none has-medium hover-yellow has-theme-blue">
+                                            <a href="#"><svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M11.624 11.9541L12.193 8.54137L8.63572 8.54137V6.32676C8.63572 5.39311 9.13264 4.48303 10.7258 4.48303H12.343V1.57748C12.343 1.57748 10.8755 1.34692 9.47233 1.34692C6.54282 1.34692 4.62796 2.98146 4.62796 5.94041L4.62796 8.54137H1.37158L1.37158 11.9541H4.62796L4.62796 20.2041H8.63572L8.63572 11.9541H11.624Z" fill="white"></path></svg></a>
+                                            <a href="#"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9.0335 4.57741C6.58997 4.57741 4.60742 6.55982 4.60742 9.00349C4.60742 11.4472 6.58997 13.4296 9.0335 13.4296C11.4771 13.4296 13.4596 11.4472 13.4596 9.00349C13.4596 6.55982 11.4771 4.57741 9.0335 4.57741ZM9.0335 11.8746C7.44826 11.8746 6.16237 10.5889 6.16237 9.00349C6.16237 7.41811 7.44826 6.13243 9.03347 6.13243C10.6188 6.13243 11.9046 7.41811 11.9046 9.00349C11.9046 10.5889 10.6188 11.8746 9.0335 11.8746Z" fill="white"></path></svg></a>
+                                            <a href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M9.35332 6.88729L14.6472 0.733521H13.3928L8.79603 6.07675L5.12465 0.733521H0.890137L6.44199 8.81343L0.890137 15.2666H2.1447L6.99896 9.62397L10.8762 15.2666H15.1107L9.35332 6.88729Z" fill="white"></path></svg></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rs-footer-right">
+                            <div class="rs-footer-widget-wrapper">
+                                <div class="rs-footer-widget footer-1-col-2">
+                                    <h5 class="rs-footer-widget-title">Quick Links</h5>
+                                    <div class="rs-footer-widget-link has-theme-yellow">
+                                        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul>
+                                    </div>
+                                </div>
+                                <div class="rs-footer-widget footer-1-col-3">
+                                    <h5 class="rs-footer-widget-title">Our Courses</h5>
+                                    <div class="rs-footer-widget-link has-theme-yellow">
+                                        <ul><li><a href="courses.html">Communicative & Spoken English</a></li><li><a href="courses.html">Voice & Accent Training</a></li><li><a href="courses.html">Soft Skills & Personality Development</a></li><li><a href="courses.html">Interview & Corporate Training</a></li></ul>
+                                    </div>
+                                </div>
+                                <div class="rs-footer-widget footer-1-col-4">
+                                    <h5 class="rs-footer-widget-title">Contact Details</h5>
+                                    <div class="rs-footer-contact-horizontal">
+                                        <div class="rs-footer-contact-item"><span class="rs-footer-contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.65387 1.32849C3.40343 1.00649 2.92745 0.976861 2.639 1.26531L1.60508 2.29923C1.1216 2.78271 0.94387 3.46766 1.1551 4.06847C2.00338 6.48124 3.39215 8.74671 5.32272 10.6773C7.25329 12.6078 9.51876 13.9966 11.9315 14.8449C12.5323 15.0561 13.2173 14.8784 13.7008 14.3949L14.7347 13.361C15.0231 13.0726 14.9935 12.5966 14.6715 12.3461L12.3653 10.5524C12.2008 10.4245 11.9866 10.3793 11.7845 10.4298L9.59541 10.9771C9.00082 11.1257 8.37183 10.9515 7.93845 10.5181L5.48187 8.06155C5.04849 7.62817 4.87427 6.99919 5.02292 6.40459L5.57019 4.21553C5.62073 4.01336 5.57552 3.79918 5.44758 3.63468L3.65387 1.32849Z" fill="currentColor"></path></svg></span><a href="tel:8754476502">87544 76502</a></div>
+                                        <div class="rs-footer-contact-item"><span class="rs-footer-contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2C0.895431 2 0 2.89543 0 4V12L2.58386e-05 12.0103C0.00555998 13.1101 0.898859 14 2 14H7.5C7.77614 14 8 13.7761 8 13.5C8 13.2239 7.77614 13 7.5 13H2C1.53715 13 1.14774 12.6855 1.03376 12.2586L6.67417 8.7876L8 9.5831L15 5.3831V8.5C15 8.77614 15.2239 9 15.5 9C15.7761 9 16 8.77614 16 8.5V4C16 2.89543 15.1046 2 14 2H2ZM5.70808 8.20794L1 11.1052V5.3831L5.70808 8.20794Z" fill="currentColor"></path></svg></span><a href="mailto:jsacademy@gmail.com">jsacademy@gmail.com</a></div>
+                                        <div class="rs-footer-contact-item"><span class="rs-footer-contact-icon"><svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M11.8768 9.68475C11.3059 10.835 10.5331 11.9818 9.74128 13.0109C8.95198 14.0368 8.15999 14.9249 7.5643 15.5572C7.48514 15.6412 7.40956 15.7206 7.33802 15.7951C7.26648 15.7206 7.1909 15.6412 7.11174 15.5572C6.51605 14.9249 5.72406 14.0368 4.93476 13.0109C4.14299 11.9818 3.37019 10.835 2.79925 9.68475C2.22242 8.52266 1.89032 7.43373 1.89032 6.5C1.89032 3.50846 4.32934 1.08333 7.33802 1.08333C10.3467 1.08333 12.7857 3.50846 12.7857 6.5C12.7857 7.43373 12.4536 8.52266 11.8768 9.68475Z" fill="currentColor"></path></svg></span><span>Chennai, Tamilnadu</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rs-footer-copyright-area rs-copyright-one">
+                                <div class="rs-footer-copyright-wrapper">
+                                    <div class="rs-footer-copyright-right">
+                                        <div class="rs-footer-copyright-item">
+                                            <div class="rs-footer-copyright"><p>Copyright © <span id="year"></span> JS English Academy. Developed by <a href="https://chennaileads.com" target="_blank">ChennaiLeads</a></p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <div id="backtotop-wrap">
+        <svg class="arrowicon" viewBox="0 0 24 24" width="18" height="18"><path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" fill="#000"></path></svg>
+        <svg class="scrollprogress" width="40" height="40"><circle class="progress-circle" cx="20" cy="20" r="18" stroke-width="2" fill="none" stroke="#fff" stroke-dasharray="113.1" stroke-dashoffset="113.1"></circle></svg>
+    </div>
+
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/wow.min.js"></script>
+    <script src="assets/js/plugins/jarallax.min.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/plugins/lenis.min.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/plugins/rs-anim-int.js"></script>
+    <script src="assets/js/plugins/rs-scroll-trigger.min.js"></script>
+    <script src="assets/js/plugins/rs-splitText.min.js"></script>
+    <script src="assets/js/plugins/jquery.appear.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/flatpickr.min.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

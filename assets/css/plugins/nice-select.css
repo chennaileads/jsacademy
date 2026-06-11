@@ -1,0 +1,589 @@
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  color: var(--rs-white);
+  background-color: transparent;
+  border-radius: 3px;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  height: 60px;
+  line-height: 58px;
+  outline: none;
+  -webkit-padding-start: 25px;
+     -moz-padding-start: 25px;
+          padding-inline-start: 25px;
+  -webkit-padding-end: 44px;
+     -moz-padding-end: 44px;
+          padding-inline-end: 44px;
+  position: relative;
+  text-align: start;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.nice-select:hover {
+  border-color: var(--rs-white);
+}
+
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
+  border-color: var(--rs-white);
+}
+
+.nice-select:after {
+  display: block;
+  height: auto;
+  pointer-events: none;
+  position: absolute;
+  inset-inline-end: 20px;
+  top: 50%;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  content: "\ea4e";
+  font-family: 'remixicon' !important;
+  font-size: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 0;
+  height: auto;
+  width: auto;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nice-select.open:after {
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  -ms-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+}
+
+.nice-select.disabled {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+.nice-select.wide {
+  width: 100%;
+}
+
+.nice-select.wide .list {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.nice-select.right {
+  float: right;
+}
+
+.nice-select.right .list {
+  left: auto;
+  right: 0;
+}
+
+.nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px;
+}
+
+.nice-select.small:after {
+  height: 4px;
+  width: 4px;
+}
+
+.nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px;
+}
+
+.nice-select .list {
+  color: var(--rs-white);
+  background-color: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 8px 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(-21px);
+  -ms-transform: scale(0.75) translateY(-21px);
+  transform: scale(0.75) translateY(-21px);
+  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25),
+    opacity 0.15s ease-out;
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+}
+
+.nice-select .list:hover .option:not(:hover) {
+  background-color: transparent !important;
+}
+
+.nice-select .option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  -webkit-padding-start: 25px;
+     -moz-padding-start: 25px;
+          padding-inline-start: 25px;
+  -webkit-padding-end: 29px;
+     -moz-padding-end: 29px;
+          padding-inline-end: 29px;
+  text-align: start;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+  background-color: var(--rs-theme-yellow);
+  color: var(--rs-black);
+}
+
+.nice-select .option.selected {
+  font-weight: 600;
+  background-color: var(--rs-theme-yellow);
+  color: var(--rs-black);
+}
+
+.nice-select .option.disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+
+.no-csspointerevents .nice-select .list {
+  display: none;
+}
+
+.no-csspointerevents .nice-select.open .list {
+  display: block;
+}
+
+/* Placeholder / default option color */
+.nice-select .current {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* When an option is selected, make text white */
+.nice-select .option.selected ~ .current,
+.nice-select .selected .current {
+  color: var(--rs-white);
+}
+
+
+/* ============================================
+   JS English Academy - Courses Page CSS
+   ============================================ */
+
+/* ---------- Popup Overlay ---------- */
+.course-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.course-popup-overlay.active {
+    display: flex;
+}
+
+/* ---------- Popup Container ---------- */
+.course-popup {
+    background: #1a1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    animation: popupSlideIn 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+@keyframes popupSlideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ---------- Popup Header ---------- */
+.course-popup-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-popup-header h4 {
+    color: #fff;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.course-popup-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    line-height: 1;
+}
+.course-popup-close:hover {
+    background: #ffc107;
+    color: #000;
+}
+
+/* ---------- Popup Body ---------- */
+.course-popup-body {
+    padding: 30px 25px 25px;
+}
+.course-popup-body .rs-contact-input-box {
+    margin-bottom: 15px;
+}
+.course-popup-body .rs-contact-input-box:first-child {
+    margin-bottom: 20px;
+}
+
+/* ---------- Popup Input Fields ---------- */
+.course-popup-body .rs-contact-input input,
+.course-popup-body .rs-contact-input select,
+.course-popup-body .rs-contact-input textarea {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 20px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+.course-popup-body .rs-contact-input textarea {
+    height: 100px;
+    padding: 15px 20px;
+    resize: none;
+}
+.course-popup-body .rs-contact-input input:focus,
+.course-popup-body .rs-contact-input select:focus,
+.course-popup-body .rs-contact-input textarea:focus {
+    border-color: #fff;
+}
+.course-popup-body .rs-contact-input input::placeholder,
+.course-popup-body .rs-contact-input textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- Readonly Course Field ---------- */
+.course-popup-body .rs-contact-input input[readonly] {
+    background: rgba(255, 193, 7, 0.08) !important;
+    border-color: rgba(255, 193, 7, 0.4) !important;
+    color: #ffc107 !important;
+    cursor: default;
+    font-weight: 500;
+}
+
+/* ---------- Popup Select Dropdown ---------- */
+.course-popup-body .rs-contact-input select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='white' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+    padding-right: 40px;
+}
+.course-popup-body .rs-contact-input select option {
+    background: #1a1a2e;
+    color: #fff;
+}
+.course-popup-body .rs-contact-input select:invalid {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- Popup Submit Button ---------- */
+.course-popup-submit {
+    width: 100%;
+    height: 50px;
+    background: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.course-popup-submit:hover {
+    background: #fff;
+}
+
+/* ---------- Sticky Contact Buttons ---------- */
+.sticky-contact-buttons {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sticky-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    text-decoration: none;
+    position: relative;
+}
+.sticky-btn:hover {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Button */
+.sticky-btn-whatsapp {
+    background: #25D366;
+    animation: pulse 2s infinite;
+}
+
+/* Call Button */
+.sticky-btn-call {
+    background: #007bff;
+}
+
+.sticky-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+/* Pulse Animation for WhatsApp */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Tooltip */
+.sticky-btn-tooltip {
+    position: absolute;
+    right: 65px;
+    background: #333;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.sticky-btn:hover .sticky-btn-tooltip {
+    opacity: 1;
+}
+
+/* ---------- Footer Brand Name ---------- */
+.rs-footer-brand-name {
+    color: var(--rs-white);
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+/* ---------- Footer About Text ---------- */
+.rs-footer-about-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 320px;
+}
+
+/* ---------- Footer Horizontal Contact ---------- */
+.rs-footer-contact-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.rs-footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+.rs-footer-contact-item a,
+.rs-footer-contact-item span {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.rs-footer-contact-item a:hover {
+    color: var(--rs-white);
+}
+.rs-footer-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--rs-white);
+    transition: all 0.3s ease;
+}
+.rs-footer-contact-item:hover .rs-footer-contact-icon {
+    background: var(--rs-theme-yellow);
+    color: var(--rs-black);
+}
+
+/* ---------- Section Subtitle ---------- */
+.rs-section-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+/* ---------- Courses Card Description ---------- */
+.rs-faculty-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .rs-footer-contact-horizontal {
+        gap: 15px;
+    }
+    .rs-footer-brand-name {
+        font-size: 22px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .rs-footer-contact-horizontal {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .course-popup {
+        max-width: 95%;
+    }
+    .course-popup-header h4 {
+        font-size: 17px;
+    }
+    .rs-footer-about-text {
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .sticky-contact-buttons {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+    .sticky-btn {
+        width: 48px;
+        height: 48px;
+    }
+    .sticky-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    .course-popup-body {
+        padding: 20px 15px 15px;
+    }
+    .course-popup-header {
+        padding: 15px 20px;
+    }
+    .rs-footer-brand-name {
+        font-size: 20px;
+    }
+}
